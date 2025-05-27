@@ -1,7 +1,6 @@
-import { Keypair } from "@solana/web3.js";
+import "dotenv/config"
+import { getKeypairFromEnvironment } from "@solana-developers/helpers";
 
-const keypair = Keypair.generate();
+const keypair = getKeypairFromEnvironment("SECRET_KEY");
 
-console.log(`The public key: ${keypair.publicKey.toBase58()}`)
-console.log(`The secret key: ${keypair.secretKey}`)
 console.log("Generated key pair");
